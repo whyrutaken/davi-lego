@@ -1,0 +1,72 @@
+﻿<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v7.js"></script>
+<script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<script src="index.js" defer></script>
+
+<style>
+    b   {color: #4f77b3;
+        font-size: 17px;
+        }
+	.node {
+		cursor: pointer;
+	}
+
+	.node circle {
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 3px;
+	}
+
+	.node text {
+	  font: 12px sans-serif;
+	}
+
+	.link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 2px;
+	}
+	
+    </style>
+
+<body>
+    <div class="container-fluid row">
+        
+        <h1 style="font-size:30px"> LEGO Database Visualization </h1>
+        <div class="container-fluid row">
+            <div class="col-md-2">
+                <button type="button" onclick='button()'>Sort themes</button>
+                <div id="buttonTriger"></div>
+                <b >Select parent themes: </b>
+                <div id="table_check_box"></div>
+            </div>
+            <div class="col-md-10">
+                <div class="container-fluid row">
+                    <div class="col-md-6">
+                        <!-- Create a div where the stream_graph will take place -->
+                        <div id="stream_graph"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Create a div where the bar_graph will take place-->
+                        <div id="bar_graph"></div>
+                    </div>
+                </div>
+                <div class="container-fluid row">
+                    <div class="col-md-2">
+                        <div id="tree_label"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="tree_map"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
